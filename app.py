@@ -6,12 +6,12 @@ from google.genai import types
 from key import api_key
 
 
-# Define our strict sequence array constraint
-EXACT_LANGUAGE_SEQUENCE = ["Malayalam", "Kannada", "Tamil", "Telugu", "Marathi", "Hindi"]
+# Updated sequence: Tamil is now second
+EXACT_LANGUAGE_SEQUENCE = ["Malayalam", "Tamil", "Kannada", "Telugu", "Marathi", "Hindi"]
 
-st.set_page_config(page_title="Regional Language Interface", page_icon="🌐", layout="centered")
-st.title("🌐 Regional Indian Language Interface")
-st.caption("Outputs locked to: Malayalam ➡️ Kannada ➡️ Tamil ➡️ Telugu ➡️ Marathi ➡️ Hindi")
+st.set_page_config(page_title="Language Translator", page_icon="🌐", layout="centered")
+st.title("🌐 Language Translator")
+st.caption("Outputs locked to: Malayalam ➡️ Tamil ➡️ Kannada ➡️ Telugu ➡️ Marathi ➡️ Hindi")
 
 # Initialize the Gemini Client globally inside Streamlit's engine
 if "gemini_client" not in st.session_state:
@@ -33,8 +33,8 @@ async def execute_direct_translation(text: str) -> str:
     
     Provide the accurate translation or conversational equivalent into these six languages in this EXACT sequence:
     1. Malayalam
-    2. Kannada
-    3. Tamil
+    2. Tamil
+    3. Kannada
     4. Telugu
     5. Marathi
     6. Hindi
@@ -47,8 +47,8 @@ async def execute_direct_translation(text: str) -> str:
     You MUST return a valid, unquoted JSON object matching this schema shape perfectly:
     {{
         "Malayalam": "Native Script (Phonetic Transliteration)",
-        "Kannada": "Native Script (Phonetic Transliteration)",
         "Tamil": "Native Script (Phonetic Transliteration)",
+        "Kannada": "Native Script (Phonetic Transliteration)",
         "Telugu": "Native Script (Phonetic Transliteration)",
         "Marathi": "Native Script (Phonetic Transliteration)",
         "Hindi": "Native Script (Phonetic Transliteration)"
