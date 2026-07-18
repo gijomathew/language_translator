@@ -9,8 +9,8 @@ from key import api_key
 # Define our strict sequence array constraint
 EXACT_LANGUAGE_SEQUENCE = ["Malayalam", "Kannada", "Tamil", "Telugu", "Marathi", "Hindi"]
 
-st.set_page_config(page_title="Regional Language Interface", page_icon="🌐", layout="centered")
-st.title("🌐 Regional Indian Language Interface")
+st.set_page_config(page_title="Language Translator Interface", page_icon="🌐", layout="centered")
+st.title("🌐 Language Translator Interface")
 st.caption("Outputs locked to: Malayalam ➡️ Kannada ➡️ Tamil ➡️ Telugu ➡️ Marathi ➡️ Hindi")
 
 # Initialize the Gemini Client globally inside Streamlit's engine
