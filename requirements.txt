@@ -1,0 +1,6 @@
+fastmcp
+httpx
+mcp
+google-genai
+streamlit
+watchdog
