@@ -21,8 +21,8 @@ _mcp_utils._filter_to_supported_schema = safe_filter_to_supported_schema
 
 LOCAL_URL = "http://localhost:8080/mcp"
 
-st.set_page_config(page_title="Regional Language Interface", page_icon="🌐", layout="centered")
-st.title("🌐 Regional Indian Language Interface")
+st.set_page_config(page_title="Language Interface", page_icon="🌐", layout="centered")
+st.title("🌐 Language Interface")
 st.caption("Outputs locked to: Malayalam ➡️ Kannada ➡️ Tamil ➡️ Telugu ➡️ Marathi ➡️ Hindi")
 
 if "gemini_client" not in globals():
