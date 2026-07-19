@@ -4,3 +4,4 @@ mcp
 google-genai
 streamlit
 watchdog
+openai
